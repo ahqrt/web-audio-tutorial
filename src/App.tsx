@@ -4,11 +4,11 @@ import { basicAudioSample} from './audioUse/basicAudioSample'
 
 function App() {
 
-  useEffect(() => {
-    basicAudioSample()
-  }, [])
   return (
-    <div>App </div>
+    <div>
+      App 
+      <button onClick={basicAudioSample}>播放</button>
+    </div>
   )
 }
 

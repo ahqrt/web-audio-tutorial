@@ -12,8 +12,14 @@ export function basicAudioSample() {
 }
 
 function playBuffer(audioBuffer: AudioBuffer) {
+    // createBufferSource is used to play audio data contained within an AudioBuffer object
     const sourceNode = audioCtx.createBufferSource()
     sourceNode.buffer = audioBuffer
+    // audioCtx.destination representing the final destination of all audio in the context
+    // It can be thought of as the audio-rendering device.
+    // It is from the BaseAudioContext
+
+    // AudioNode.connect 
     sourceNode.connect(audioCtx.destination)
     sourceNode.start(0)
 }
