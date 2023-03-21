@@ -1,7 +1,12 @@
 const audioCtx = new AudioContext()
 const gainNode = audioCtx.createGain()
 
-const pannerOptions = {pan: -1}
+const pannerOptions = { pan: -1 }
+
+// the StereoPannerNode interface of the web audio api represents a simple stereo
+// panner node that can be used to pan an audio stream left or right
+// you can visit https://developer.mozilla.org/en-US/docs/Web/API/StereoPannerNode to get the detail information
+
 const panner = new StereoPannerNode(audioCtx, pannerOptions)
 
 
